@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 #
 # About the project
 #
-project(NMEAParserLib)
+set(LIB_NMEA NMEAParserLib)
 
 
 if(MSVC)
@@ -27,7 +27,7 @@ execute_process(COMMAND git describe --abbrev=4 HEAD
 #
 # Add executable name and project files
 #
-add_library(NMEAParserLib
+add_library(NMEAParserLib SHARED
 	DoxygenMainPage.md
     NMEAParserPacket.cpp
     NMEAParserPacket.h
