@@ -102,7 +102,7 @@ CNMEAParserData::ERROR_E CNMEASentenceRMC::ProcessSentence(char *pCmd, char *pDa
 		m_SentenceData.m_dSpeedKnots = atol(szField);
 	}
 	else {
-		m_SentenceData.m_dSpeedKnots = 0.0;
+		m_SentenceData.m_dSpeedKnots = -1.0;
 	}
 
 	// Track Angle
