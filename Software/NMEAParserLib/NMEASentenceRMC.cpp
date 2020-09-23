@@ -67,9 +67,9 @@ CNMEAParserData::ERROR_E CNMEASentenceRMC::ProcessSentence(char *pCmd, char *pDa
 	//
 	if (GetField(pData, szField, 2, c_nMaxField) == CNMEAParserData::ERROR_OK)
 	{
-		m_SentenceData.m_dLatitude = atof((char *)szField + 2) / 60.0;
-		szField[2] = '\0';
-		m_SentenceData.m_dLatitude += atof((char *)szField);
+		// m_SentenceData.m_dLatitude = atof((char *)szField + 2) / 60.0;
+		// szField[2] = '\0';
+		m_SentenceData.m_dLatitude = atof((char *)szField);
 
 	}
 	if (GetField(pData, szField, 3, c_nMaxField) == CNMEAParserData::ERROR_OK)
@@ -85,9 +85,9 @@ CNMEAParserData::ERROR_E CNMEASentenceRMC::ProcessSentence(char *pCmd, char *pDa
 	//
 	if (GetField(pData, szField, 4, c_nMaxField) == CNMEAParserData::ERROR_OK)
 	{
-		m_SentenceData.m_dLongitude = atof((char *)szField + 3) / 60.0;
-		szField[3] = '\0';
-		m_SentenceData.m_dLongitude += atof((char *)szField);
+		// m_SentenceData.m_dLongitude = atof((char *)szField + 3) / 60.0;
+		// szField[3] = '\0';
+		m_SentenceData.m_dLongitude = atof((char *)szField);
 	}
 	if (GetField(pData, szField, 5, c_nMaxField) == CNMEAParserData::ERROR_OK)
 	{
